@@ -35,7 +35,8 @@ function loadSpecials() {
             row.appendChild(dscriphead);
 
             var imghead = document.createElement('IMG');
-            imghead.innerHTML = specials[i].Picture;
+            imghead.setAttribute("src", specials[i].Picture);
+            imghead.setAttribute("class", "img-responsive")
             row.appendChild(imghead);
 
             specialsWall.appendChild(row);

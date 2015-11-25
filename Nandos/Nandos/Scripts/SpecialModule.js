@@ -6,7 +6,9 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "http://localhost:58346/api/Specials",
+                
+                    //http://localhost:58346/api/Specials
+                url: "http://nandoso-hamish.azurewebsites.net/api/specials",
                 success: function (data) {
                     console.log(data);
                     callback(data);
