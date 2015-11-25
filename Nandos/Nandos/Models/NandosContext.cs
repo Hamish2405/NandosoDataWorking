@@ -22,7 +22,7 @@ namespace Nandos.Models
                 var specials = new List<Special>
                 {
                     new Special {Name = "Classic Chicken Breast Burger",
-                                 Picture = "",
+                                 Picture = "https://",
                                  Description = "Sink your teeth into our soft, seeded bun filled with a delicious marinated skinless chicken breast, fresh lettuce, tomato & our special light mayo.",
                                  Price = "$9.90"},
                     new Special {Name = "Chicken Breast Pita",

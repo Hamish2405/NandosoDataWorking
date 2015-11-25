@@ -34,6 +34,10 @@ function loadSpecials() {
             dscriphead.innerHTML = specials[i].Description;
             row.appendChild(dscriphead);
 
+            var imghead = document.createElement('IMG');
+            imghead.innerHTML = specials[i].Picture;
+            row.appendChild(imghead);
+
             specialsWall.appendChild(row);
         }
     }
