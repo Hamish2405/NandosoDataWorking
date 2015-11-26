@@ -32,12 +32,17 @@ function loadSpecials() {
 
             var dscriphead = document.createElement('p');
             dscriphead.innerHTML = specials[i].Description;
+            dscriphead.setAttribute("class", "dText");
             row.appendChild(dscriphead);
 
             var imghead = document.createElement('IMG');
             imghead.setAttribute("src", specials[i].Picture);
-            imghead.setAttribute("class", "img-responsive")
+            imghead.setAttribute("class", "img-responsive");
             row.appendChild(imghead);
+
+            var pageheader = document.createElement('p');
+            pageheader.setAttribute("class", "page-header");
+            row.appendChild(pageheader);
 
             specialsWall.appendChild(row);
         }

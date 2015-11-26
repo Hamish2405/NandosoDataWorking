@@ -1,64 +1,105 @@
-﻿        .navbar-brand {
-            position: absolute;
-            width: 50%;
-            left: 0;
-            top: 12%;
-            text-align: center;
-            margin: auto;
+﻿/*Bootstrap Header and Navbar Styling*/
+        .navbar-default {
+          background-color: #371204;
+          /*border-color: #d61600;*/
+        }
+        .navbar-default .navbar-brand {
+          color: #ecf0f1;
+        }
+        .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+          color: #f6e3bc;
+        }
+        .navbar-default .navbar-text {
+          color: #ecf0f1;
+        }
+        .navbar-default .navbar-nav > li > a {
+          color: #ecf0f1;
+        }
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+          color: #f6e3bc;
+        }
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+          color: #f6e3bc;
+          background-color: #d61600;
+        }
+        .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+          color: #f6e3bc;
+          background-color: #d61600;
+        }
+        .navbar-default .navbar-toggle {
+          border-color: #d61600;
+        }
+        .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+          background-color: #d61600;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+          background-color: #ecf0f1;
+        }
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+          border-color: #ecf0f1;
+        }
+        .navbar-default .navbar-link {
+          color: #ecf0f1;
+        }
+        .navbar-default .navbar-link:hover {
+          color: #f6e3bc;
         }
 
-        .navbar-custom {
-            background-color: #371204;
-                line-height: 150px;
-                height: 75px;
-                padding-top: 0;
+        @media (max-width: 767px) {
+          .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+            color: #ecf0f1;
+          }
+          .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #f6e3bc;
+          }
+          .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+            color: #f6e3bc;
+            background-color: #d61600;
+          }
         }
 
-        .nandoscustom {
-            color: #1EFF7E !important;
-        }
-
-        .color-me {
-            color: #FF0000 !important;
-            text-decoration: none;
-        }
-
-        #NandosoHeader{
-            color: #FF0000 !important;
-            text-decoration: none; 
-        }
-
-
-        h1,h2 {
+/*Font Styling*/
+                h1,h2 {
             font-family: 'Permanent Marker';
         }
+
         p{
             font-family: 'Quicksand';
-            color: #000000 !important;
-            font-weight: bold
+            font-weight: bold;
         }
-        .headerfont {
-            font-family: 'Lemon';
-            font-size: 40px;
+        .dText{
+            /*Change colour of Data/Api Text */
+            color: #000000;
         }
         .brandfont {
-            font-family: 'Lemon';
-            font-size: 60px;
+            font-family: 'Permanent Marker';
+            font-size: 45px;
         }
-        #myCarousel{
-            width: 100%;
-            margin: auto;
-            padding: 0;
-        }
-        .img-responsive {
-            margin: 0 auto;
-        }
-
-        .glyphicon.glyphicon-grain {
-             font-size: 30px;
-        }
-
-        .menupadding{
+        .navbar{
             margin: 0;
-            padding: 0;
+            border: 0;
+            /*removes rounded borders and add navbar-static-top to remove white space for navbar*/
+        }
+
+        .img-responsive {
+        margin: 0 auto;
+        }
+
+        body{
+            background-color: #F2F1EF
+        }
+
+       .commentBackground{
+            background-color: #EEEEEE
+        }
+
+        .fBackground{
+            background-color: #371204;
+            color: white !important;
+        }
+
+        
+        th,h3{
+            font-family: Quicksand;
         }

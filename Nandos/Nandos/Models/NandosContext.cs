@@ -36,7 +36,7 @@ namespace Nandos.Models
                     new Special {Name = "Espetada Grande",
                                  Picture = "Pictures/N02.jpg",
                                  Description = "Marinated thigh fillets skewered with fresh red capsicum and onion, flame-grilled to perfection, basted to your heart's desire, served over a regular side.",
-                                 Price = "$20.90"},
+                                 Price = "$20.90"}
 
                 };
                 specials.ForEach(s => context.Specials.AddOrUpdate(p => p.Description, s));

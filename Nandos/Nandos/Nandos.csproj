@@ -138,6 +138,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
+    <Content Include="home.html" />
+    <Content Include="jQueryPlugins\fakeLoader.css" />
+    <Content Include="jQueryPlugins\fakeLoader.min.js" />
     <Content Include="Livechat.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -146,6 +149,9 @@
     <Content Include="Menu.html" />
     <Content Include="Pictures\00.jpg" />
     <Content Include="Pictures\01.jpg" />
+    <Content Include="Pictures\CommentBackground.jpg" />
+    <Content Include="Pictures\deals2.jpg" />
+    <Content Include="Pictures\facebook.png" />
     <Content Include="Pictures\location23.png" />
     <Content Include="Pictures\N00.jpg" />
     <Content Include="Pictures\02.jpg" />
@@ -159,6 +165,10 @@
     <Content Include="Pictures\N01.jpg" />
     <Content Include="Pictures\N02.jpg" />
     <Content Include="Pictures\N04.jpg" />
+    <Content Include="Pictures\Banner01.png" />
+    <Content Include="Pictures\NandosLogo-1024x724.png" />
+    <Content Include="Pictures\NandosoLogo.png" />
+    <Content Include="Pictures\NandosoLogo2.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -169,10 +179,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\gmaps.js" />
     <Content Include="Scripts\index.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Scripts\SpecialModule.js" />
@@ -181,7 +192,9 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Chathub.cs" />
     <Compile Include="Controllers\SpecialsController.cs" />
+    <Compile Include="Controllers\Startup.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,7 +208,7 @@
     <None Include="Properties\PublishProfiles\hamish-nandoso - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\nandoso-hamish - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\nandoso-hamish - Web Deploy.pubxml" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

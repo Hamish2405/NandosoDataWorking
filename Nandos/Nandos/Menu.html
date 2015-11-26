@@ -1,62 +1,70 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Nandoso Menu</title>
-	<meta charset="utf-8" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/index.js"></script>
-    <script src="Scripts/SpecialModule.js"></script>
+    <title>Nandoso</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
     <link href="Content/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <style>
         /*Fonts for the headers and table*/
-        th,h2{
+        th, h2 {
             font-family: Permanent Marker;
             font-size: 40px;
         }
-        tr{
+
+        tr {
             font-family: Quicksand;
-            font-weight:bold;
+            font-weight: bold;
         }
 
         /*Make sure that the table is centered*/
-        .center-table
-        {
-          margin: 0 auto !important;
-          float: none !important;
+        .center-table {
+            margin: 0 auto !important;
+            float: none !important;
         }
 
         /*Table values align to the top of the table; instead of the middle*/
         td, th {
-        vertical-align:top;
+            vertical-align: top;
         }
     </style>
 </head>
 <body>
     <header>
-        <!--Navigation Bar; Header-->
-        <nav class="navbar navbar-default navbar-custom">
+        <!--Nandoso Header-->
+        <nav class="nav navbar navbar-default navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <p class="navbar-brand">
-                        <span class="nandoscustom glyphicon glyphicon-grain"></span>
-                        <span class="color-me headerfont"><a href="http://nandoso-hamish.azurewebsites.net/" id="NandosoHeader">Nandoso</a></span>
-                        <span class="nandoscustom glyphicon glyphicon-grain"></span>
-                    </p>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="home.html" class="pull-left"><img src="/Pictures/NandosoLogo2.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                        <li><a href="Menu.html"><span class="glyphicon glyphicon-list-alt"></span>  Menu</a></li>
+                        <li><a href="Livechat.html"><span class="glyphicon glyphicon-comment"></span> Live Chat</a></li>
+                        <li><a href="home.html#NSpecials"><span class="glyphicon glyphicon-cutlery"></span>  Specials</a></li>
+                        <li><a href="location.html"><span class="glyphicon glyphicon-map-marker"></span>  Restraunts</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-        <!--<div>
-        <h1 class="text-center brandfont page-header">Menu</h1>
-        </div>-->
-
-        <!--Menu Table-->
-        <div class="text-center">
-            <h2>Burgers</h2>
-            <table class="table table-responsive table-hover text-left span5 center-table">
+    <!--Menu Table-->
+    <div class="container">
+        <div>
+            <h2 class="text-center">Burgers</h2>
+        </div>
+        <div>
+            <table class="table table-hover">
                 <tr>
                     <td class="col-md-4">Classic Chicken Breast Burger</td>
                     <td class="col-md-6">Sink your teeth into our soft, seeded bun filled with a delicious marinated skinless chicken breast, <br /> fresh lettuce, tomato & our special light mayo.</td>
@@ -75,7 +83,7 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">Supremo Veggie Burger</td>
-                    
+
                     <td class="col-md-6">Combining a freshly baked Portuguese roll, scrumptious home-style veggie patty, gourmet lettuce, tomato, light mayo & PERi-PERi chutney. </td>
                     <td class="col-md-2">$12.90</td>
                 </tr>
@@ -86,8 +94,14 @@
                     <td class="col-md-2">$15.90</td>
                 </tr>
             </table>
-            <h2>Flame-Grilled Chicken</h2>
-            <table class="table table-responsive table-hover  text-left span5 center-table">
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="text-center">Flame-Grilled Chicken</h2>
+        </div>
+        <div>
+            <table class="table table-hover">
                 <tr>
                     <td class="col-md-4">Quarter Chicken</td>
 
@@ -107,8 +121,14 @@
                     <td class="col-md-2">$15.90</td>
                 </tr>
             </table>
-            <h2>Sides, Drinks & Extras</h2>
-            <table class="table table-responsive table-hover  text-left span5 center-table">
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="text-center">Sides, Drinks & Extrass</h2>
+        </div>
+        <div>
+            <table class="table table-hover">
                 <tr>
                     <td class="col-md-4">PERi-PERi Chips</td>
                     <td class="col-md-6">The best.</td>
@@ -131,5 +151,17 @@
                 </tr>
             </table>
         </div>
+    </div>
+<footer>
+    <div class="footer container-fluid fBackground">
+        <div class="row">
+            <p></p>
+            <h1 class="text-center">NANDOSO</h1>
+            <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45" /></a>
+            <p class="text-center">Reach us on Facebook</p>
+            <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

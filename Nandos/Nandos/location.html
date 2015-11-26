@@ -1,29 +1,170 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Nandoso Locations</title>
-	<meta charset="utf-8" />
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/index.js"></script>
-    <script src="Scripts/SpecialModule.js"></script>
+    <title>Nandoso</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
     <link href="Content/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBi7e8AiTyqWiFt9vlbGqsAzGyRhVWqCsk&sensor=true"></script>
+    <script src="Scripts/gmaps.js"></script>
+    <script>
+/**
+  * Basic Map
+  */
+        var map;
+        var panorama;
+        jQuery(function ($) {
+            $(document).ready(function () {
+                var latlng = new google.maps.LatLng(-36.895356, 174.7511503);
+                var myOptions = {
+                    zoom: 12,
+                    center: latlng,
+                    panControl: true,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.SMALL
+                    },
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    overviewMapControl: true,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                };
+                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+
+            });
+        });
+    </script>
+    <style>
+        /*Fonts for the headers and table*/
+        h2 {
+            font-family: Permanent Marker;
+            font-size: 40px;
+        }
+
+        tr {
+            font-family: Quicksand;
+            font-weight: bold;
+        }
+
+        /*Make sure that the table is centered*/
+        .center-table {
+            margin: 0 auto !important;
+            float: none !important;
+        }
+
+        /*Table values align to the top of the table; instead of the middle*/
+        td, th {
+            vertical-align: top;
+        }
+
+                .container {
+            margin-top: 30px;
+            }
+            #map_canvas {
+               width: 100%;
+               height:400px;
+            }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-default navbar-custom">
+        <!--Nandoso Header-->
+        <nav class="nav navbar navbar-default navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <p class="navbar-brand">
-                        <span class="nandoscustom glyphicon glyphicon-grain"></span>
-                        <span class="color-me headerfont"><a href="http://nandoso-hamish.azurewebsites.net/" id="NandosoHeader">Nandoso</a></span>
-                        <span class="nandoscustom glyphicon glyphicon-grain"></span>
-                    </p>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="home.html" class="pull-left"><img src="/Pictures/NandosoLogo2.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                        <li><a href="Menu.html"><span class="glyphicon glyphicon-list-alt"></span>  Menu</a></li>
+                        <li><a href="Livechat.html"><span class="glyphicon glyphicon-comment"></span> Live Chat</a></li>
+                        <li><a href="home.html#NSpecials"><span class="glyphicon glyphicon-cutlery"></span>  Specials</a></li>
+                        <li><a href="location.html"><span class="glyphicon glyphicon-map-marker"></span>  Restraunts</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <!--MAPS-->
+    <div>
+        <h3 class="text-center" font-size="40px">Nandoso Map</h3>
+    </div>
+    <div class="container">
+        <div class="well">
+            <div id="map_canvas"></div>
+        </div>
+    </div>
+    <div>
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Location</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Queen Street</td>
+                    <td>
+                        328 Queen Street
+                        Auckland Central City
+                        0820
+                    </td>
+                    <td>09 377 9588</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Newmarket</td>
+                    <td>
+                        Shop 1.4, Level 1, Rialto Centre
+                        163 Broadway
+                        New Market
+                        1023
+                    </td>
+                    <td>09 523 0920</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Onehunga</td>
+                    <td>
+                        235 Onehunga Mall Road
+                        Onehunga
+                        1061
+                    </td>
+                    <td>09 634 2200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <footer>
+        <div class="footer container-fluid fBackground">
+            <div class="row">
+                <p></p>
+                <h1 class="text-center">NANDOSO</h1>
+                <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45" /></a>
+                <p class="text-center">Reach us on Facebook</p>
+                <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

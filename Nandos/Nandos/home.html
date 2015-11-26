@@ -2,15 +2,13 @@
 <html>
 <head>
     <title>Nandoso</title>
-    <meta charset="utf-8" />
+	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
     <script src="Scripts/jquery-2.1.4.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link href="jQueryPlugins/fakeLoader.css" rel="stylesheet" />
     <script src="Scripts/index.js"></script>
     <script src="Scripts/SpecialModule.js"></script>
     <style>
@@ -34,27 +32,13 @@
                         <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
                         <li><a href="Menu.html"><span class="glyphicon glyphicon-list-alt"></span>  Menu</a></li>
                         <li><a href="Livechat.html"><span class="glyphicon glyphicon-comment"></span> Live Chat</a></li>
-                        <li><a href="#NSpecials"><span class="glyphicon glyphicon-cutlery"></span>  Specials</a></li>
+                        <li><a href="home.html#NSpecials"><span class="glyphicon glyphicon-cutlery"></span>  Specials</a></li>
                         <li><a href="location.html"><span class="glyphicon glyphicon-map-marker"></span>  Restraunts</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!--Fakeloader jQueryPlugin-->
-    <script src="jQueryPlugins/fakeLoader.min.js"></script>
-    <div id="fakeLoader">
-        <!-- Using fakeLoader -->
-        <script>
-                $("#fakeLoader").fakeLoader({
-                    // imagePath:"yourPath/customizedImage.gif", //If you want can you insert your custom image
-                    timeToHide: 1200,       // Animation lasts 1000 ms
-                    zIndex: 999,            // Make sure that the loader is always on top of any other elements
-                    spinner: "spinner2",    // Change spinner animation
-                    bgColor: "#371204",      // Custom background colour
-                });
-        </script>
-    </div>
     <!--Image Buttons-->
     <div class="container-fluid">
         <div class="row">
@@ -62,12 +46,33 @@
             <a href="Menu.html"><img class=" img-responsive center-block" id="#myCarousel" alt="Menu" src="Pictures/menu2chalk.jpg" /></a>
             <a href="location.html"><img class=" img-responsive center-block" id="#myCarousel" alt="Locations" src=" Pictures/location23.PNG" /></a>
         </div>
-    </div>
-    <!--Image Carousel-->
+    </div>  
     <!--Daily Specials-->
     <div id="NSpecials"><h1 class="text-center brandfont">Today's Specials!</h1></div>
     <div class="container-fluid">
         <div class="row center-block text-center" id="specialsWall">
+            <!--Test Data for CSS-->
+            <!--<<div class="row center-block text-center" id="specialsWall">
+            <h1>Classic Your Mum</h1>
+            <h2>$90000</h2>
+            <p>DESCRIPTION IS AWESEOME BEOP BEOP BEOP</p>
+            <img class="img-responsive" src="Pictures/N04.jpg" />
+                 <p class="page-header"></p>
+            </div>
+            <div class="row center-block text-center" id="specialsWall">
+            <h1>Classic Your Mum</h1>
+            <h2>$90000</h2>
+            <p>DESCRIPTION IS AWESEOME BEOP BEOP BEOP</p>
+            <img class="img-responsive" src="Pictures/N01.jpg" />
+                <p class="page-header"></p>
+            </div>
+            <div class="row center-block text-center" id="specialsWall">
+            <h1>Classic Your Mum</h1>
+            <h2>$90000</h2>
+            <p>DESCRIPTION IS AWESEOME BEOP BEOP BEOP</p>
+            <img class="img-responsive" src="Pictures/N02.jpg" />
+            <p class="page-header"></p>
+            </div>-->
         </div>
     </div>
     <!--Disquss Comment System-->
@@ -98,16 +103,17 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments.</a></noscript>
         </div>
     </div>
-    <footer>
-        <div class="footer container-fluid fBackground">
-            <div class="row">
-                <p></p>
-                <h1 class="text-center">NANDOSO</h1>
-                <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45" /></a>
-                <p class="text-center">Reach us on Facebook</p>
-                <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
-            </div>
+<footer>
+    <div class="footer container-fluid fBackground">
+        <div class="row">
+            <p></p>
+            <h1 class="text-center">NANDOSO</h1>
+            <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45"/></a>
+            <p class="text-center">Reach us on Facebook</p>
+            <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
+
