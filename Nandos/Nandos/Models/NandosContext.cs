@@ -22,17 +22,22 @@ namespace Nandos.Models
                 var specials = new List<Special>
                 {
                     new Special {Name = "Classic Chicken Breast Burger",
-                                 Picture = "Pictures/05.jpg",
+                                 Picture = "Pictures/N00.jpg",
                                  Description = "Sink your teeth into our soft, seeded bun filled with a delicious marinated skinless chicken breast, fresh lettuce, tomato & our special light mayo.",
                                  Price = "$9.90"},
                     new Special {Name = "Chicken Breast Pita",
-                                 Picture = "Pictures/ChicPita.jpg",
+                                 Picture = "Pictures/N01.jpg",
                                  Description = "Portuguese passion in a pita with a succulent, skinless chicken breast, crisp iceberg lettuce, cucumber & juicy tomato, topped with our special light mayo.",
                                  Price = "$10.90"},
+                    new Special {Name = "Classic Chicken Wrap",
+                                 Picture = "Pictures/N04.jpg",
+                                 Description = "Our scrumptious home-style veggie patty will please when placed in a warm pita with fresh lettuce, tomato, cucumber & our special light mayo. ",
+                                 Price = "$9.90"},
                     new Special {Name = "Espetada Grande",
-                                 Picture = "Pictures/04.jpg",
+                                 Picture = "Pictures/N02.jpg",
                                  Description = "Marinated thigh fillets skewered with fresh red capsicum and onion, flame-grilled to perfection, basted to your heart's desire, served over a regular side.",
-                                 Price = "$20.90"}
+                                 Price = "$20.90"},
+
                 };
                 specials.ForEach(s => context.Specials.AddOrUpdate(p => p.Description, s));
                 context.SaveChanges();

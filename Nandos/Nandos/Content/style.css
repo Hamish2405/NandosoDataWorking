@@ -1,0 +1,64 @@
+﻿        .navbar-brand {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 12%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .navbar-custom {
+            background-color: #371204;
+                line-height: 150px;
+                height: 75px;
+                padding-top: 0;
+        }
+
+        .nandoscustom {
+            color: #1EFF7E !important;
+        }
+
+        .color-me {
+            color: #FF0000 !important;
+            text-decoration: none;
+        }
+
+        #NandosoHeader{
+            color: #FF0000 !important;
+            text-decoration: none; 
+        }
+
+
+        h1,h2 {
+            font-family: 'Permanent Marker';
+        }
+        p{
+            font-family: 'Quicksand';
+            color: #000000 !important;
+            font-weight: bold
+        }
+        .headerfont {
+            font-family: 'Lemon';
+            font-size: 40px;
+        }
+        .brandfont {
+            font-family: 'Lemon';
+            font-size: 60px;
+        }
+        #myCarousel{
+            width: 100%;
+            margin: auto;
+            padding: 0;
+        }
+        .img-responsive {
+            margin: 0 auto;
+        }
+
+        .glyphicon.glyphicon-grain {
+             font-size: 30px;
+        }
+
+        .menupadding{
+            margin: 0;
+            padding: 0;
+        }

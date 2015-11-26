@@ -7,7 +7,7 @@
                 type: "GET",
                 dataType: "json",
                 
-                    //http://localhost:58346/api/Specials
+                //http://localhost:58346/api/Specials
                 url: "http://nandoso-hamish.azurewebsites.net/api/specials",
                 success: function (data) {
                     console.log(data);
