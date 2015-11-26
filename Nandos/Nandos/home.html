@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Nandoso</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
@@ -11,8 +11,25 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/index.js"></script>
     <script src="Scripts/SpecialModule.js"></script>
-    <style>
-    </style>
+    <script src="jQueryPlugins/elevator.min.js"></script>
+
+    <!--
+    To collect end-user usage analytics about your application,
+    insert the following script into each page you want to track.
+    Place this code immediately before the closing </head> tag,
+    and before any other scripts. Your first data will appear
+    automatically in just a few seconds.
+    -->
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"4c057c10-475d-40b8-8054-2646687d906e"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <header>
@@ -31,9 +48,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
                         <li><a href="Menu.html"><span class="glyphicon glyphicon-list-alt"></span>  Menu</a></li>
-                        <li><a href="Livechat.html"><span class="glyphicon glyphicon-comment"></span> Live Chat</a></li>
                         <li><a href="home.html#NSpecials"><span class="glyphicon glyphicon-cutlery"></span>  Specials</a></li>
                         <li><a href="location.html"><span class="glyphicon glyphicon-map-marker"></span>  Restraunts</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment"></span> Live Chat</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,9 +63,9 @@
             <a href="Menu.html"><img class=" img-responsive center-block" id="#myCarousel" alt="Menu" src="Pictures/menu2chalk.jpg" /></a>
             <a href="location.html"><img class=" img-responsive center-block" id="#myCarousel" alt="Locations" src=" Pictures/location23.PNG" /></a>
         </div>
-    </div>  
+    </div>
     <!--Daily Specials-->
-    <div id="NSpecials"><h1 class="text-center brandfont">Today's Specials!</h1></div>
+    <div id="NSpecials"><h1 class="text-center brandfont">Today's Specials!&nbsp;   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment"></span>  Live Chat</button></h1></div>
     <div class="container-fluid">
         <div class="row center-block text-center" id="specialsWall">
             <!--Test Data for CSS-->
@@ -103,17 +120,124 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments.</a></noscript>
         </div>
     </div>
-<footer>
-    <div class="footer container-fluid fBackground">
-        <div class="row">
-            <p></p>
-            <h1 class="text-center">NANDOSO</h1>
-            <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45"/></a>
-            <p class="text-center">Reach us on Facebook</p>
-            <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
+    <!--Live CHAT-->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="font-family: Quicksand">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center">Nandoso Live Chat</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="container-fluid">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2">Username:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" style="width: 100%" id="displayname" placeholder="Enter your name here..." />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2">Message:</label>
+                                    <div class="col-sm-10">
+                                        <textarea id="message" style="width:100%" placeholder="Type a message here..."></textarea>
+                                        <input type="button" id="sendmessage" value="Send" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="">
+                            <h3>Messages:</h3>
+                            <ul id="discussion"></ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     </div>
-</footer>
+    <!--Script references. -->
+    <!--Reference the jQuery library. -->
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <!--Reference the SignalR library. -->
+    <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="signalr/hubs"></script>
+    <!--Add script to update the page and send messages.-->
+    <script type="text/javascript">
+        $(function () {
+            // Declare a proxy to reference the hub.
+            var chat = $.connection.chatHub;
+            // Create a function that the hub can call to broadcast messages.
+            chat.client.broadcastMessage = function (name, message) {
+                // Html encode display name and message.
+                var encodedName = $('<div />').text(name).html();
+                var encodedMsg = $('<div />').text(message).html();
+                // Add the message to the page.
+                $('#discussion').append('<li><strong>' + encodedName
+                    + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
+            };
+            // Get the user name and store it to prepend to messages.
+            //$('#displayname').val(prompt('Enter your name:', ''));
+            // Set initial focus to message input box.
+            $('#message').focus();
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+                $('#sendmessage').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    // Clear text box and reset focus for next comment.
+                    $('#message').val('').focus();
+                });
+            });
+        });
+
+    </script>
+    <!-- pressing enter submits message -->
+    <script>
+        $(document).ready(function () {
+            $("#message").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    $("#sendmessage").click();
+                }
+
+            });
+        });
+    </script>
+
+    <script>
+    // Elevator script included on the page, already.
+
+    window.onload = function() {
+      var elevator = new Elevator({
+        element: document.querySelector('.elevator-button'),
+        duration: 1000 // milliseconds
+      });
+    }
+
+    </script>
+    <footer>
+        <div class="footer container-fluid fBackground">
+            <div class="row">
+                <p></p>
+                <div class="elevator-button text-center"><button type="button" value="Back to the top!" class="btn btn-warning">Elevator to the top of the page</button></div>
+                <p></p>
+                <h1 class="text-center">NANDOSO</h1>
+                <a href="https://www.facebook.com/Nandos"><img src="/Pictures/facebook.png" class="center-block small" height="45" width="45" /></a>
+                <p class="text-center">Reach us on Facebook</p>
+                <p class="text-center">TM & Copynotright 2015 Nandoso Corporation. All Rights Not Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+
 
