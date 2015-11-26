@@ -10,8 +10,8 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Lemon|Permanent+Marker|Quicksand' rel='stylesheet' type='text/css'>
     <link href="Content/style.css" rel="stylesheet" />
-
     <style>
+        /*Fonts for the headers and table*/
         th,h2{
             font-family: Permanent Marker;
             font-size: 40px;
@@ -21,19 +21,22 @@
             font-weight:bold;
         }
 
-.center-table
-{
-  margin: 0 auto !important;
-  float: none !important;
-}
+        /*Make sure that the table is centered*/
+        .center-table
+        {
+          margin: 0 auto !important;
+          float: none !important;
+        }
 
-td, th {
-vertical-align:top;
-}
+        /*Table values align to the top of the table; instead of the middle*/
+        td, th {
+        vertical-align:top;
+        }
     </style>
 </head>
 <body>
     <header>
+        <!--Navigation Bar; Header-->
         <nav class="navbar navbar-default navbar-custom">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -49,6 +52,8 @@ vertical-align:top;
         <!--<div>
         <h1 class="text-center brandfont page-header">Menu</h1>
         </div>-->
+
+        <!--Menu Table-->
         <div class="text-center">
             <h2>Burgers</h2>
             <table class="table table-responsive table-hover text-left span5 center-table">
